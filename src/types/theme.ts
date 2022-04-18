@@ -25,8 +25,8 @@ export interface JsonTheme extends Tokens<Style | Style[]> {}
 
 	Example:
 	```ts
-	import {Theme, plain} from 'cli-highlight';
-	import chalk = require('chalk');
+	import { Theme, plain } from 'cli-highlighter';
+	import chalk from 'chalk';
 	*
 	const myTheme: Theme = {
 			keyword: chalk.red.bold,

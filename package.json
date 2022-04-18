@@ -14,7 +14,7 @@
 		"url": "https://leonzalion.com"
 	},
 	"bin": {
-		"cli-highlighter": "./bin/cli.js"
+		"highlight": "./bin/cli.js"
 	},
 	"type": "module",
 	"exports": "./src/index.ts",
