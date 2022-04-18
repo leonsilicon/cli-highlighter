@@ -27,15 +27,10 @@ db-migrate --dry-run | highlight
 Command line options:
 
 ```html
-Usage: highlight [options] [file]
-
-Outputs a file or STDIN input with syntax highlighting
-
-Options:
-  --language, -l  Set the langugage explicitely
-                  If omitted will try to auto-detect
-  --theme, -t     Use a theme defined in a JSON file
-  --help, -h      Show help
+Usage: highlight [options] [file] Outputs a file or STDIN input with syntax
+highlighting Options: --language, -l Set the langugage explicitely If omitted
+will try to auto-detect --theme, -t Use a theme defined in a JSON file --help,
+-h Show help
 ```
 
 ## Programmatic Usage
@@ -48,9 +43,9 @@ import Sequelize from 'sequalize';
 
 const db = new Sequelize(process.env.DB, {
   logging(log) {
-    console.log(highlight(log, { language: 'sql', ignoreIllegals: true }))
-  }
-})
+    console.log(highlight(log, { language: 'sql', ignoreIllegals: true }));
+  },
+});
 ```
 
 Detailed API documentation can be found [here](http://cli-highlight.surge.sh/).
