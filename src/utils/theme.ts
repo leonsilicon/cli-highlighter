@@ -1,6 +1,7 @@
 // eslint-disable-next-line unicorn/import-style
 import type { ChalkInstance } from 'chalk';
 import chalk from 'chalk';
+import onetime from 'onetime';
 
 import type { Style, Styler } from '~/types/style.js';
 import type { JsonTheme, Theme } from '~/types/theme.js';
@@ -13,50 +14,52 @@ export const plain: Styler = (codePart) => codePart;
 /**
  * The default theme. It is possible to override just individual keys.
  */
-export const DEFAULT_THEME: Theme = {
-	keyword: chalk.blue,
-	built_in: chalk.cyan,
-	type: chalk.cyan.dim,
-	literal: chalk.blue,
-	number: chalk.green,
-	regexp: chalk.red,
-	string: chalk.red,
-	subst: plain,
-	symbol: plain,
-	class: chalk.blue,
-	function: chalk.yellow,
-	title: plain,
-	params: plain,
-	comment: chalk.green,
-	doctag: chalk.green,
-	meta: chalk.grey,
-	'meta-keyword': plain,
-	'meta-string': plain,
-	section: plain,
-	tag: chalk.grey,
-	name: chalk.blue,
-	'builtin-name': plain,
-	attr: chalk.cyan,
-	attribute: plain,
-	variable: plain,
-	bullet: plain,
-	code: plain,
-	emphasis: chalk.italic,
-	strong: chalk.bold,
-	formula: plain,
-	link: chalk.underline,
-	quote: plain,
-	'selector-tag': plain,
-	'selector-id': plain,
-	'selector-class': plain,
-	'selector-attr': plain,
-	'selector-pseudo': plain,
-	'template-tag': plain,
-	'template-variable': plain,
-	addition: chalk.green,
-	deletion: chalk.red,
-	default: plain,
-};
+export const getDefaultTheme = onetime(
+	(): Theme => ({
+		keyword: chalk.blue,
+		built_in: chalk.cyan,
+		type: chalk.cyan.dim,
+		literal: chalk.blue,
+		number: chalk.green,
+		regexp: chalk.red,
+		string: chalk.red,
+		subst: plain,
+		symbol: plain,
+		class: chalk.blue,
+		function: chalk.yellow,
+		title: plain,
+		params: plain,
+		comment: chalk.green,
+		doctag: chalk.green,
+		meta: chalk.grey,
+		'meta-keyword': plain,
+		'meta-string': plain,
+		section: plain,
+		tag: chalk.grey,
+		name: chalk.blue,
+		'builtin-name': plain,
+		attr: chalk.cyan,
+		attribute: plain,
+		variable: plain,
+		bullet: plain,
+		code: plain,
+		emphasis: chalk.italic,
+		strong: chalk.bold,
+		formula: plain,
+		link: chalk.underline,
+		quote: plain,
+		'selector-tag': plain,
+		'selector-id': plain,
+		'selector-class': plain,
+		'selector-attr': plain,
+		'selector-pseudo': plain,
+		'template-tag': plain,
+		'template-variable': plain,
+		addition: chalk.green,
+		deletion: chalk.red,
+		default: plain,
+	})
+);
 
 /**
 	Converts a [[JsonTheme]] with string values to a [[Theme]] with formatter functions. Used by [[parse]].

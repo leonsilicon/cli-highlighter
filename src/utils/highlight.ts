@@ -7,18 +7,20 @@ import type { HighlightOptions } from '~/types/highlight.js';
 import type { Styler } from '~/types/style.js';
 import type { Theme } from '~/types/theme';
 import type { Tokens } from '~/types/tokens.js';
-import { DEFAULT_THEME, plain } from '~/utils/theme.js';
+import { getDefaultTheme, plain } from '~/utils/theme.js';
 
 function colorizeNode(
 	node: HtmlParser2.Node,
 	theme: Theme = {},
 	context?: string
 ): string {
+	const defaultTheme = getDefaultTheme();
+
 	switch (node.type) {
 		case 'text': {
 			const text = (node as HtmlParser2.TextNode).data;
 			if (context === undefined) {
-				return (theme.default ?? DEFAULT_THEME.default ?? plain)(text);
+				return (theme.default ?? defaultTheme.default ?? plain)(text);
 			}
 
 			return text;
@@ -34,7 +36,7 @@ function colorizeNode(
 					.map((node) => colorizeNode(node, theme, token))
 					.join('');
 
-				return (theme[token] ?? DEFAULT_THEME[token] ?? plain)(nodeData);
+				return (theme[token] ?? defaultTheme[token] ?? plain)(nodeData);
 			}
 
 			// Return the data itself when the class name isn't prefixed with a highlight.js token prefix.

@@ -33,6 +33,7 @@
 		"commander": "^9.2.0",
 		"highlight.js": "^11.5.1",
 		"mz": "^2.7.0",
+		"onetime": "^6.0.0",
 		"outdent": "^0.8.0",
 		"parse5": "^6.0.1",
 		"parse5-htmlparser2-tree-adapter": "^6.0.1"

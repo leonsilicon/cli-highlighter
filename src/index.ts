@@ -8,4 +8,4 @@ export {
 	supportsLanguage,
 } from './utils/highlight.js';
 export { highlight as default } from './utils/highlight.js';
-export { DEFAULT_THEME, fromJson, plain } from './utils/theme.js';
+export { fromJson, getDefaultTheme, plain } from './utils/theme.js';

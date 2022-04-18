@@ -4,6 +4,10 @@ import * as path from 'node:path';
 import process from 'node:process';
 import { describe, expect, it } from 'vitest';
 
+// Needed to override `lionp` settings
+process.env.FORCE_COLOR = '3';
+
+// eslint-disable-next-line import/first
 import { highlight, listLanguages, supportsLanguage } from '~/index.js';
 
 function testLanguage(language: string, code: string): void {
