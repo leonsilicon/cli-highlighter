@@ -12,7 +12,7 @@ import { highlight, supportsLanguage } from '~/utils/highlight.js';
 import { parse } from '~/utils/theme.js';
 
 program
-	.name('cli-highlighter')
+	.name('highlight')
 	.usage(
 		outdent`
 			Usage: highlight [options] [file]
