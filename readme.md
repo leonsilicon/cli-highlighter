@@ -1,6 +1,6 @@
 # cli-highlighter
 
-This package is a fork of [felixfbecker's amazing cli-highlight package](https://github.com/felixfbecker/cli-highlight).
+This package is a fork of [felixfbecker's amazing cli-highlight package](https://github.com/felixfbecker/cli-highlight) which seems to be unmaintained.
 
 > Syntax highlighting in your terminal
 
