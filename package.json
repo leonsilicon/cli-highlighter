@@ -34,8 +34,8 @@
 		"highlight.js": "^11.5.1",
 		"onetime": "^6.0.0",
 		"outdent": "^0.8.0",
-		"parse5": "^7.0.0",
-		"parse5-htmlparser2-tree-adapter": "^7.0.0"
+		"parse5": "^6.0.1",
+		"parse5-htmlparser2-tree-adapter": "^6.0.1"
 	},
 	"devDependencies": {
 		"@leonzalion/configs": "^1.4.4",
