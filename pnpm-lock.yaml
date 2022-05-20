@@ -7,7 +7,6 @@ specifiers:
   chalk: ^5.0.1
   commander: ^9.2.0
   desm: ^1.2.0
-  eslint-define-config: ^1.4.0
   execa: ^6.1.0
   highlight.js: ^11.5.1
   lionconfig: ^1.7.17
@@ -33,7 +32,6 @@ devDependencies:
   '@types/parse5': 6.0.3
   '@types/parse5-htmlparser2-tree-adapter': 6.0.1
   desm: 1.2.0
-  eslint-define-config: 1.4.1
   execa: 6.1.0
   lionconfig: 1.7.17_typescript@4.6.4
   type-fest: 2.12.2
